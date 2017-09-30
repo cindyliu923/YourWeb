@@ -23,7 +23,7 @@ body{
  /* border: 1px solid blue;  標示用，完成排版後刪除*/
 
   position: relative;
-  top: 0px;
+  top: 78px;
   padding: 0px;
 
 }
@@ -107,7 +107,7 @@ h1 {
 }
 
 #about h1 {
-  text-align: left;
+  text-align: left; 
 }
 
 h3 {
@@ -117,7 +117,7 @@ h3 {
 table {
   font-size: 14px;
   text-align: left;
-  margin: 15px;
+ /* margin: 15px; */
 }
 
 th, td {
@@ -171,6 +171,7 @@ hr {
 
 .item img{
   width: 100%;
+  display: block;  /*這裡讓item和img有相同的高*/
 }
 
 #contact-me {
@@ -220,3 +221,86 @@ form.contact-form {
 .form-row button:active {
   background-color: #407FC7;
 }
+
+@media screen and (min-width: 1024px) {
+  .menu-button ,
+  .menu-button-checkbox {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  
+body {
+    background: url(img/back.jpg) center center fixed no-repeat;
+    -moz-background-size: cover;
+    background-size: cover;
+}   /*這裡是網路查的背景全螢幕顯示方式*/
+
+
+  .container {
+    width: auto;
+  }
+  .menu-button {
+    float: right;
+    font-size: 25px;
+    line-height: 40px;
+    color: white;
+    background: transparent;
+    padding: 0 15px;
+    border: 0;
+  }
+    .menu-button-checkbox {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 40px;
+  }
+
+  .menu-button-checkbox:checked ~ .menu {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    margin-top: 0;
+    padding-left: 0;
+    position: fixed;
+    right: 0;
+    top: 40px;
+    width: 150px;
+    height: 100%;
+  }
+
+  .menu li {
+    border: 0;
+    border-radius: 0;
+  }
+
+  #my-avatar {
+  width: 100%; 
+  }
+
+  #my-avatar img {
+  display: block;
+  margin: 15px auto;
+  }
+  .item {
+    max-width: 100%;
+  }
+  form.contact-form {
+    width: 80%;
+  }
+
+  /*
+    手機版的 css 都寫在這邊
+  */   
+
+}
+
+
+
+
+
